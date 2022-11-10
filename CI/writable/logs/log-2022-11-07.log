@@ -1,0 +1,430 @@
+ERROR - 2022-11-07 06:42:51 --> mysqli_sql_exception: No database selected in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('vneetkaur1212@g...', 'email', Array, NULL, 'email')
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'vneetkaur1212@g...', Array, Array)
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#14 {main}
+CRITICAL - 2022-11-07 06:42:51 --> No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `users`
+WHERE `email` = \'vneetkaur1212@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `email` = \'vneetkaur1212@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `email` = \'vneetkaur1212@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('vneetkaur1212@gmail.com', 'email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'vneetkaur1212@gmail.com', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\SignupController.php(25): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-07 07:00:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'phpmyadmin'@'localhost' (using password: NO) in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'phpmyadmin', '', 'login ci', 3306, '', 0)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('vneetkaur1212@g...', 'email', Array, NULL, 'email')
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'vneetkaur1212@g...', Array, Array)
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('vneetkaur1212@g...', 'email', Array, NULL, 'email')
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'vneetkaur1212@g...', Array, Array)
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#13 {main}
+CRITICAL - 2022-11-07 07:00:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('vneetkaur1212@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'vneetkaur1212@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-07 07:04:52 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'phpmyadmin'@'localhost' (using password: NO) in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'phpmyadmin', '', 'login ci', 3306, '', 0)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('vneetkaur1212@g...', 'email', Array, NULL, 'email')
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'vneetkaur1212@g...', Array, Array)
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('vneetkaur1212@g...', 'email', Array, NULL, 'email')
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'vneetkaur1212@g...', Array, Array)
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#13 {main}
+CRITICAL - 2022-11-07 07:04:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('vneetkaur1212@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'vneetkaur1212@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-07 07:05:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'phpmyadmin'@'localhost' (using password: NO) in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'phpmyadmin', '', 'login ci', 3306, '', 0)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('root@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'root@gmail.com', Array, Array)
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('root@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'root@gmail.com', Array, Array)
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#13 {main}
+CRITICAL - 2022-11-07 07:05:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('root@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'root@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-07 07:44:25 --> Class "App\Models\UserModel" not found
+in APPPATH\Controllers\SignupController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-07 07:47:21 --> Class "App\Models\UserModel" not found
+in APPPATH\Controllers\SignupController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-07 07:47:38 --> Class "App\Models\UserModel" not found
+in APPPATH\Controllers\SignupController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-07 20:45:39 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'login ci', 3306, '', 0)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gaman@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'gaman@gmail.com', Array, Array)
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gaman@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'gaman@gmail.com', Array, Array)
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#13 {main}
+CRITICAL - 2022-11-07 20:45:39 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gaman@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'gaman@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-07 20:45:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'login ci', 3306, '', 0)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gaman@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'gaman@gmail.com', Array, Array)
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gaman@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'gaman@gmail.com', Array, Array)
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#13 {main}
+CRITICAL - 2022-11-07 20:45:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('gaman@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'gaman@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-07 20:46:39 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'login ci', 3306, '', 0)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('naman@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'naman@gmail.com', Array, Array)
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('naman@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'naman@gmail.com', Array, Array)
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#13 {main}
+CRITICAL - 2022-11-07 20:46:39 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('naman@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'naman@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-07 20:46:44 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'login ci', 3306, '', 0)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('naman@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'naman@gmail.com', Array, Array)
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('naman@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'naman@gmail.com', Array, Array)
+#6 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\guru\Downloads\codeigniter4-framework-v4.2.9-0-g34373df\codeigniter4-framework-34373df\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\guru\\D...')
+#13 {main}
+CRITICAL - 2022-11-07 20:46:44 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('naman@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'naman@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
