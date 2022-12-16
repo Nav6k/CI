@@ -21,7 +21,7 @@
                         
                         <h2 class="text-center mb-lg-3 mb-2">Book an appointment</h2>
                     
-                        <form role="form" action="#booking" method="post">
+                        <form role="form" action="<?php echo base_url(); ?>/BookingCont/booked" method="post">
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required="">

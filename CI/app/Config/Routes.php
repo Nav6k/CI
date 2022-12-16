@@ -21,6 +21,13 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
+
+$routes->get('users-list', 'UserCrud::index');
+$routes->get('user-form', 'UserCrud::create');
+$routes->post('submit-form', 'UserCrud::store');
+$routes->get('edit-view/(:num)', 'UserCrud::singleUser/$1');
+$routes->post('update', 'UserCrud::update');
+$routes->get('delete/(:num)', 'UserCrud::delete/$1');
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -40,6 +47,7 @@ $routes->get('/', 'SignupController::index');
 $routes->get('/signup', 'SignupController::index');
 $routes->match(['get', 'post'], 'SignupController/store', 'SignupController::store');
 $routes->match(['get', 'post'], 'SigninController/loginAuth', 'SigninController::loginAuth');
+$routes->match(['get', 'post'], 'BookingCont/booked', 'BookingCont::bookingdone');
 $routes->get('/signin', 'SigninController::index');
 $routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);
 $routes->get('(:any)', 'Pages::view/$1');

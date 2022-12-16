@@ -1,0 +1,52 @@
+ERROR - 2022-12-09 22:54:32 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CodeIgn\CI\CI\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\CodeIgn\CI\CI\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'login ci', 3306, '', 0)
+#1 C:\xampp\htdocs\CodeIgn\CI\CI\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CodeIgn\CI\CI\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CodeIgn\CI\CI\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CodeIgn\CI\CI\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CodeIgn\CI\CI\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('naman@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\CodeIgn\CI\CI\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'naman@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\CodeIgn\CI\CI\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\CodeIgn\CI\CI\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\CodeIgn\CI\CI\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 C:\xampp\htdocs\CodeIgn\CI\CI\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 C:\xampp\htdocs\CodeIgn\CI\CI\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\CodeIgn\CI\CI\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\CodeIgn\CI\CI\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CodeIgn\CI\CI\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\CodeIgn\CI\CI\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CodeIgn\CI\CI\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CodeIgn\CI\CI\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\CodeIgn\CI\CI\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\CodeIgn\CI\CI\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('naman@gmail.com', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\CodeIgn\CI\CI\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'naman@gmail.com', Array, Array)
+#6 C:\xampp\htdocs\CodeIgn\CI\CI\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\CodeIgn\CI\CI\app\Controllers\SignupController.php(25): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\CodeIgn\CI\CI\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#9 C:\xampp\htdocs\CodeIgn\CI\CI\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#10 C:\xampp\htdocs\CodeIgn\CI\CI\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\CodeIgn\CI\CI\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\CodeIgn\CI\CI\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-12-09 22:54:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('naman@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'naman@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(25): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -29,13 +29,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Booking">Booking</a>
-          </li>
+          </li> 
           <li class="nav-item">
             <a class="nav-link" href="Contact">Contact</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="Login">Login</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="#">Testimonials</a>
           </li>
